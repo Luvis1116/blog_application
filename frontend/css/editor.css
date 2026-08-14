@@ -1,0 +1,12 @@
+/* editor.css */
+.editor-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.editor-textarea {
+    min-height: 400px;
+    font-family: monospace;
+    resize: vertical;
+    line-height: 1.5;
+}

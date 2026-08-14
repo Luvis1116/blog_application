@@ -1,0 +1,68 @@
+/* auth.css */
+.auth-container {
+    max-width: 420px;
+    margin: 4remauto;
+    padding: 3rem 2.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    
+}
+
+.auth-container h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.social-login {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.btn-social:hover {
+    background: var(--bg-secondary);
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
