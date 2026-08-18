@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs - Blog Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Blog Page</a>
+        <div class="nav-links" id="nav-links">
+            <!-- Populated by JS -->
+        </div>
+    </nav>
+    
+    <div class="container" style="padding-top: 4rem; padding-bottom: 5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 style="font-size: 2.5rem;">My Stories</h1>
+            <a href="editor.html" class="btn btn-primary">+ Write New Post</a>
+        </div>
+        <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 3rem;">
+        
+        <div id="my-blogs-container" class="blog-grid">
+            <div class="loader active">Loading your blogs...</div>
+            <!-- Populated by JS -->
+        </div>
+    </div>
+    
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/blogs.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
