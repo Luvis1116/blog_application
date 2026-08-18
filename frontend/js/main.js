@@ -36,8 +36,8 @@ function setupNavbar() {
     let centerLinks = `
         <a href="index.html" class="${isHome ? 'active' : ''}">Home</a>
         <a href="my-blogs.html" class="${isMyBlogs ? 'active' : ''}" style="${currentUser ? '' : 'display:none;'}">My Blogs</a>
-        <a href="about.html" class="${isAbout ? 'active' : ''}">About</a>;
-    
+        <a href="about.html" class="${isAbout ? 'active' : ''}">About</a>
+    `;
 
     let rightActions = '';
     if (currentUser) {
@@ -52,8 +52,8 @@ function setupNavbar() {
     } else {
         rightActions = `
             <a href="login.html" style="color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.95rem;">Login</a>
-            <a href="register.html" class="btn btn-primary">Sign Up</a>;
-        `
+            <a href="register.html" class="btn btn-primary">Sign Up</a>
+        `;
     }
     
     navLinks.innerHTML = `

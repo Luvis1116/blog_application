@@ -1,23 +1,23 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog_application</title>
+    <title>Disara Blog</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="nav-brand">Blog Page</a> -
+        <a href="index.html" class="nav-brand">Blog Page</a>
         <div class="nav-links" id="nav-links">
-           <!--Populated by JS ----> 
+            <!-- Populated by JS -->
         </div>
     </nav>
-
+    
     <div class="hero">
         <h1 style="max-width: 600px; margin: 0 auto 1.5rem;">Publishing for deep thinkers and clear writers.</h1>
-        <p style="max-width: 650px; margin: 0 auto 2.5rem;">A Minimalist, distraction-free environment designed to let your ideas take center stage. Join a community that values clarity, substance, and the art of long-form reading. </p>
+        <p style="max-width: 650px; margin: 0 auto 2.5rem;">A minimalist, distraction-free environment designed to let your ideas take center stage. Join a community that values clarity, substance, and the art of long-form reading.</p>
         <a href="editor.html" class="btn btn-primary hero-btn" id="home-create-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
@@ -26,8 +26,51 @@
             Create New Blog
         </a>
     </div>
-
-
-
+    
+    <div class="container" style="padding-top: 0; padding-bottom: 5rem;">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => {
+                    const btn = document.getElementById('home-create-btn');
+                    if (typeof currentUser !== 'undefined' && !currentUser) {
+                        btn.href = 'login.html'; // Redirect to login if not logged in
+                    }
+                }, 500);
+            });
+        </script>
+        
+        <div class="category-filters" id="category-filters" style="display: flex; gap: 1rem; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.5rem;">
+            <button class="btn btn-primary filter-btn active" data-category="All">All</button>
+            <button class="btn btn-outline filter-btn" data-category="Technology">Technology</button>
+            <button class="btn btn-outline filter-btn" data-category="Design">Design</button>
+            <button class="btn btn-outline filter-btn" data-category="Writing">Writing</button>
+            <button class="btn btn-outline filter-btn" data-category="Lifestyle">Lifestyle</button>
+            <button class="btn btn-outline filter-btn" data-category="General">General</button>
+        </div>
+        
+        <div id="blog-grid" class="blog-grid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">Blog Page</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">RSS Feed</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2024 Blog Page. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/blogs.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

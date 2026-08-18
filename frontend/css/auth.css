@@ -1,12 +1,11 @@
 /* auth.css */
 .auth-container {
     max-width: 420px;
-    margin: 4remauto;
-    padding: 3rem 2.5rem;
+    margin: 4rem auto;
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    padding: 3rem 2.5rem;
     border-radius: 8px;
-    
+    border: 1px solid var(--border-color);
 }
 
 .auth-container h2 {

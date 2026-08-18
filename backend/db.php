@@ -1,9 +1,12 @@
 <?php
-$host = 'localhost';
-$port = '3307';
-$db_name = 'blog_db';
-$username = 'root'; // default XAMPP username
-$password = '';     // default XAMPP password
+// Load environment variables from .env file
+$env = parse_ini_file(__DIR__ . '/../.env');
+
+$host = $env['DB_HOST'] ?? 'localhost';
+$port = $env['DB_PORT'] ?? '3306';
+$db_name = $env['DB_NAME'] ?? 'blog_db';
+$username = $env['DB_USER'] ?? 'root';
+$password = $env['DB_PASS'] ?? '';
 
 try {
     $conn = new PDO("mysql:host=" . $host . ";port=" . $port . ";dbname=" . $db_name, $username, $password);

@@ -2,8 +2,9 @@
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 4rem  0;
+    padding: 4rem 0;
     max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -40,8 +41,8 @@
 }
 
 .blog-grid {
-    dispaly: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -284,4 +285,3 @@
         grid-template-columns: 1fr;
     }
 }
-

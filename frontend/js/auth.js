@@ -3,17 +3,16 @@ let currentUser = null;
 
 async function checkAuth() {
     try {
-        const response = await fetch('${API_BASE}/auth.php?action=check');
+        const response = await fetch(`${API_BASE}/auth.php?action=check`);
         const data = await response.json();
-        if (data.authentication) {
+        if (data.authenticated) {
             currentUser = data;
         } else {
             currentUser = null;
-        }   
-    }  catch (err) {
+        }
+    } catch (err) {
         console.error("Auth check failed", err);
-    } 
-    
+    }
 }
 
 async function logout() {
