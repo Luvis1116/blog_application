@@ -52,7 +52,11 @@ if ($action === 'login' && $_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         } catch (PDOException $e) {
             http_response_code(400);
-            echo json_encode(['error' => 'Registration failed. Username or email might already exist.']);
+            if ($e->getCode() == 23000) {
+                echo json_encode(['error' => 'Registration failed. Username or email already exists.']);
+            } else {
+                echo json_encode(['error' => 'Registration failed: ' . $e->getMessage()]);
+            }
         }
     } else {
         http_response_code(400);
@@ -78,4 +82,4 @@ if ($action === 'login' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     http_response_code(400);
     echo json_encode(['error' => 'Invalid action or request method.']);
 }
-?>
+

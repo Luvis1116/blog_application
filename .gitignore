@@ -1,0 +1,33 @@
+# Environment & Sensitive Configuration
+.env
+.env.local
+.env.*.local
+*.env
+
+# User Uploaded Media & Files
+/uploads/
+/backend/uploads/
+
+# Log Files & Caches
+*.log
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies (if added in future)
+/vendor/
+/node_modules/

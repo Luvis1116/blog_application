@@ -274,4 +274,4 @@ if ($action === 'get-all' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     http_response_code(400);
     echo json_encode(['error' => 'Invalid action or request method.']);
 }
-?>
+

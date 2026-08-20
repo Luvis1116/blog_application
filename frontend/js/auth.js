@@ -72,10 +72,11 @@ function setupRegisterForm() {
                     showAlert('Registration successful. You can now login.', 'success');
                     setTimeout(() => window.location.href = 'login.html', 1500);
                 } else {
-                    showAlert(result.error);
+                    showAlert(result.error || 'Registration failed.');
                 }
             } catch (err) {
-                showAlert('Registration failed. Please try again.');
+                console.error('Registration error:', err);
+                showAlert('Registration failed. Please check backend connection.');
             }
         });
     }
